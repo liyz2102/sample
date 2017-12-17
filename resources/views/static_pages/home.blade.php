@@ -12,7 +12,7 @@
 	 	let's begin
 	 	</p>
 	 	<p>
-	 		<a class="btn btn-lg btn-success" href="#" role="button">login</a>
+	 		<a class="btn btn-lg btn-success" href="{{route('login') }}" role="button">login now</a>
 	 	</p>
 	</div>
 @section('content')
