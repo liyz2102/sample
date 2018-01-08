@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Models\User;
 
+use Auth;
+
 class UsersController extends Controller
 {
     public function create()
@@ -36,6 +38,10 @@ class UsersController extends Controller
     			'password' => bcrypt($request -> password)
     			
     	]);
+//     	session() -> flash('success','welcome to laravel');
+//     	return redirect()->route('users.show',[$user]);
+    	
+    	Auth::login($user);
     	session() -> flash('success','welcome to laravel');
     	return redirect()->route('users.show',[$user]);
     	
